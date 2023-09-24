@@ -1,5 +1,6 @@
 import ITask from "@/lib/types/ITask";
 import React from "react";
+import TaskCard from "./TaskCard";
 
 const TaskList = ({ tasks }: { tasks: ITask[] }) => {
   return (
@@ -9,8 +10,8 @@ const TaskList = ({ tasks }: { tasks: ITask[] }) => {
       ) : (
         <>
           <p>You have: {tasks.length} tasks</p>
-          {tasks.map(() => (
-            <p>"abc"</p>
+          {tasks.map((task) => (
+            <TaskCard task={task} />
           ))}
         </>
       )}
