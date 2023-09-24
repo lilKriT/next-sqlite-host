@@ -13,6 +13,7 @@ const TaskCard = ({ task }: { task: ITask }) => {
     try {
       const res = await fetch(`${url}/api/tasks/${task.id}`, {
         method: "DELETE",
+        // cache: "no-store",
       });
 
       router.refresh();

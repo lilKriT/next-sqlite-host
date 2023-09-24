@@ -16,10 +16,11 @@ const TaskForm = () => {
       const res = await fetch(`${url}/api/tasks`, {
         method: "POST",
         body: JSON.stringify({ title }),
+        // cache: "no-store",
       });
 
-      setTitle("");
       router.refresh();
+      setTitle("");
     } catch (error) {
       console.log(error);
     }

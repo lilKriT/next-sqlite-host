@@ -11,7 +11,7 @@ const TaskList = ({ tasks }: { tasks: ITask[] }) => {
         <>
           <p>You have: {tasks.length} tasks</p>
           {tasks.map((task) => (
-            <TaskCard task={task} />
+            <TaskCard task={task} key={task.id} />
           ))}
         </>
       )}

@@ -16,3 +16,12 @@ export default async function Home() {
     </main>
   );
 }
+
+// Adding those two lines fixed revalidating. Or maybe just one of them?
+// I also added cache on the fetch requests.
+// But no cache on fetch alone DIDN'T fix it.
+// I can safely remove no cache from fetch and it still works.
+// Now checking if I can remove one of those lines.
+// export const dynamic = "force-dynamic";
+export const revalidate = 0;
+// Works fine with just revalidate!
