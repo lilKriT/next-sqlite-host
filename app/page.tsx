@@ -9,7 +9,7 @@ export default async function Home() {
   return (
     <main className="min-h-screen flex justify-center">
       <div className="container">
-        <h1>SQLite test</h1>
+        <h1>SQLite test!</h1>
         <TaskList tasks={tasks} />
         <TaskForm />
       </div>
