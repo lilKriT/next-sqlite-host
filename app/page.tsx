@@ -25,3 +25,5 @@ export default async function Home() {
 // export const dynamic = "force-dynamic";
 export const revalidate = 0;
 // Works fine with just revalidate!
+
+// Also just checked - the way build is set up, the database is not being wiped out with every commit!
